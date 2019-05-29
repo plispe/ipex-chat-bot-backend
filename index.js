@@ -33,11 +33,11 @@ app.post('/', async (req, res) => {
     
     switch (intent) {
         case 'produktovy_katalog':
-            replyText = `Zde je odkaz na Nás produktový katalog: ${pages[intent]}.`
+            replyText = `Zde je odkaz na produktový katalog IPEXu. ${pages[intent]}.`
         case 'ceniky':
             if (pricelist_type.length) {
                 const {value: pricelistType = null} = pricelist_type[0]
-                replyText = `Zde je odkaz na cenik pro ${pricelistType}: `
+                replyText = `Zde je odkaz na cenik pro ${pricelistType}. `
             }
             break;
         default:
