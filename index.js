@@ -11,7 +11,9 @@ app.post('/', (req, res) => {
     switch (msg.toLowerCase()) {
         case 'ping': 
           res.json({msg: 'pong'})
-          break;
+          break
+        default:
+          res.json({msg})
     }
 })
 
